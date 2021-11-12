@@ -4,10 +4,9 @@ import MoviesContextProvider from './context/MoviesContext';
 import './index.css';
 import App from './pages/App/App';
 import reportWebVitals from './reportWebVitals';
-
 ReactDOM.render(
   <MoviesContextProvider>
-    <App />
+      <App />
   </MoviesContextProvider>,
   document.getElementById('root')
 );

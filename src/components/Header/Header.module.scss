@@ -1,0 +1,77 @@
+@import "../../style/style";
+
+
+.headerContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    width: 100%;
+    background-color: var(--color-black);
+    box-shadow: 0px 2px 4px rgba(168, 166, 166, 0.08);
+    padding: 0px 20px; 
+}
+.thIcon{
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+}
+.lang{
+    color: var(--color-white);
+    cursor: pointer;
+    margin: 0 10px;
+}
+.tools{
+    display: block;
+    display: flex;
+    align-items: center;
+}
+.linksPart{
+    display: flex;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    .logo{
+        height: 80px;
+        width: 90px;
+        cursor: pointer;
+    }
+  
+}
+.links{
+    margin: 0px 50px;
+    width: 70px;
+    display: flex;
+    justify-content: space-between;
+    li{
+        list-style-type: none;
+    }
+    a{
+        color: rgb(201, 195, 195);
+        text-decoration: none;
+        font-size: 19px;
+        font-weight: 600;
+        cursor: pointer;
+        margin: 0 20px;
+        &:hover{
+            color: var(--main-color);
+        }
+    }    
+}
+@media only screen and (max-width: 500px) {
+    .thIcon{
+        width: 30px;
+        height: 30px;
+    }
+    .links{
+        width: 50px;
+        margin: 0 0;
+        a{
+            margin: 0 8px;
+        }
+    }
+    .tools{
+        flex-direction: column;
+        margin: 0 5;
+    }
+}
