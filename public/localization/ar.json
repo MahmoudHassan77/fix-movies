@@ -1,4 +1,11 @@
 {
     "header.home":"الرئيسية",
-    "header.favourite":"المفضلة"
+    "header.favourite":"المفضلة",
+    "filter.search":"...بحث",
+    "filter.types":"نوع الأفلام",
+    "filter.top":"الأفلام الأعلى تصنيفا",
+    "filter.upcoming":"الأفلام القادمة",
+    "filter.mow":"افلام قيد التشغيل",
+    "card.date":"التاريخ",
+    "card.rated":"المعدل"
 }

@@ -1,1 +1,11 @@
-{}
+{
+    "header.home":"Home",
+    "header.favourite":"Favourite",
+    "filter.search":"Search...",
+    "filter.types":"Movies Type",
+    "filter.top":"Top Movies",
+    "filter.upcoming":"Upcoming Movies",
+    "filter.mow":"Now Playing Movies",
+    "card.date":"Date",
+    "card.rated":"Rated"
+}
