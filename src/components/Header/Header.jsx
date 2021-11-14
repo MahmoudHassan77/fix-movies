@@ -9,7 +9,7 @@ export const Header = (props) => {
     return (
         <header className={style.headerContainer}>
             <div className={style.linksPart}>
-                <Link to="./"><img className={style.logo} src="media/imgs/FixMoviesLogo.gif" alt="logo"/></Link>
+                <Link to="./"><img className={style.logo} src="media/imgs/FixMoviesLogo1.gif" alt="logo"/></Link>
                 <ul className={language === "ar"? style.links:style.linksEn}>
                     <li><NavLink exact to="/" activeStyle={{ color: '#fff' }}><FormattedMessage id="header.home" defaultMessage="Home" /></NavLink></li>
                     <li> <NavLink to="/favourite" activeStyle={{ color: '#fff' }}><FormattedMessage id="header.favourite" defaultMessage="Favourite"/></NavLink></li>

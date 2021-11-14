@@ -17,24 +17,14 @@
     --sp-md: 2.4rem;
   
     width: 100%;
-    margin: 0 auto;
     background-color: var(--color-light-card-color);
     transition: box-shadow 250ms;
     will-change: box-shadow;
     overflow: hidden;
     font-family: var(--font-family-en);
-    
     @include whiteShadow;
   
-    & .title {
-      position: relative;
-      padding: var(--sp-sm);
-      font-size: 1.5rem;
-      font-weight: 600;
-      user-select: none;
-      cursor: pointer;
-  
-    }
+    
   
     & .divider {
       margin: 0 var(--sp-sm);
@@ -54,7 +44,15 @@
     @extend .collapse;
     font-family: var(--font-family-ar);
 }
+.title {
+    position: relative;
+    padding: var(--sp-sm);
+    font-size: 1.5rem;
+    font-weight: 600;
+    user-select: none;
+    cursor: pointer;
 
+  }
 
 .search{
     height:50px;
@@ -149,9 +147,33 @@
     }
    .btnSearch{
        height: 35px;
-       margin-top: 4px;
+       margin-top: 3px;
    }
-   .collapse{
+   .title{
+       padding: 1.2rem;
+       font-size: 1rem;
+       font-weight: 600;
+       user-select: none;
+       cursor: pointer;
+   }
+   .label {
+    width: 30%;
+    font-size: 0.7rem;
+  display: flex;
+  flex: auto;
+  vertical-align: middle;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+  background-color: var(--color-gray);
+  color: white;
+  padding: 5px 5px;
+  border-radius: 6px;
+  transition: color --transition-fast ease-out, 
+  background-color --transition-fast ease-in;
+  user-select: none;
+  margin: 2px;
+}
 
-   }
 }
