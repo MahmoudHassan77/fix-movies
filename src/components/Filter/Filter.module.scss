@@ -17,7 +17,6 @@
     --sp-md: 2.4rem;
   
     width: 100%;
-    max-width: 72rem;
     margin: 0 auto;
     background-color: var(--color-light-card-color);
     transition: box-shadow 250ms;
@@ -49,11 +48,7 @@
       padding: 10px;
       margin: 0;
       font-size: 1.2rem;
-  
-      &:not(:first-of-type) {
-        padding-top: 0;
       }
-    }
 }
 .collapseAr{
     @extend .collapse;
@@ -82,14 +77,16 @@
     height:40px;
     width:30px;
     margin-top: 5px;
-    margin-left: -50px;
+    margin-left: -40px;
     cursor: pointer;
     background-color: transparent;
     border:none;
+    position: relative;
+    z-index: 1;
 }
 .btnSearchAr{
     @extend .btnSearch;
-    margin-right: -50px;
+    margin-right: -40px;
 }
   .searchForm{
     display:flex;
@@ -144,3 +141,17 @@
     background-color: var(--main-color);
     color: var(--color-black);
    }
+
+@media (max-width: 500px) {
+    .search{
+        height: 35px;
+        font-size: 15px;
+    }
+   .btnSearch{
+       height: 35px;
+       margin-top: 4px;
+   }
+   .collapse{
+
+   }
+}

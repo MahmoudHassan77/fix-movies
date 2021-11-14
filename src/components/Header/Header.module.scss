@@ -19,7 +19,10 @@
 .lang{
     color: var(--color-white);
     cursor: pointer;
-    margin: 0 10px;
+    margin: 0 5px;
+    &:hover{
+        color: var(--main-color);
+    }
 }
 .tools{
     display: block;
@@ -64,16 +67,15 @@
     font-family: var(--font-family-en);
 }
 @media only screen and (max-width: 500px) {
-    .thIcon{
-        width: 30px;
-        height: 30px;
-    }
+    
     .links{
         width: 50px;
         margin: 0 0;
         a{
             margin: 0 8px;
+            font-size: 15px;
         }
+        
     }
     .tools{
         flex-direction: column;
