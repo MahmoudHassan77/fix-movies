@@ -1,5 +1,4 @@
 import React,{useState,useEffect, useContext} from 'react';
-import style from './App.module.scss';
 import DirectionProvider, {
   DIRECTIONS,
 } from "react-with-direction/dist/DirectionProvider";

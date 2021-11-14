@@ -10,7 +10,7 @@ const Home = () => {
                 <div className={style.filter}>
                     <Filter/>
                 </div>
-                <div className={style.body}>
+                <div  className={style.body}>
                    {movies.map(movie => <Card key={movie.id} movie={movie}/>)}
                 </div>
             </div>

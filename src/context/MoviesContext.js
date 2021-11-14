@@ -1,5 +1,5 @@
 import React, { createContext, useState, useEffect } from "react";
-import { getAllMovies } from "../utils/_Api";
+import { getAllMovies, searchAboutMovie } from "../utils/_Api";
 import { getFromLocalStorage, setToLocalStorage } from "../utils/_helpers";
 
 export const MoviesContext = createContext();
@@ -69,13 +69,20 @@ useEffect(()=>{
     })
   }
 
-
+const searchMovies=(text)=>{
+  searchAboutMovie(text).then((res)=>{
+    let movies=res.data.results.map((m)=>{
+      return {...m,isFavourite:false}
+    });
+    setMovies(movies);
+  })
+}
     return (
         <MoviesContext.Provider
           value={{theme, changeTheme,
                   language, changeLanguage,
                   radioVal, changeRadioVal,
-                  movies
+                  movies,searchMovies
                 }}
         >
           {props.children}

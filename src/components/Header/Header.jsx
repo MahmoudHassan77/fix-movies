@@ -3,9 +3,8 @@ import style from "./Header.module.scss";
 import {Link, NavLink} from "react-router-dom";
 import { MoviesContext } from '../../context/MoviesContext';
 import { FormattedMessage } from 'react-intl';
-import { direction } from 'react-router-dom';
 export const Header = (props) => {
-    const{theme, changeTheme, language, changeLanguage} = useContext(MoviesContext);
+    const{ language, changeLanguage} = useContext(MoviesContext);
     return (
         <header className={style.headerContainer}>
             <div className={style.linksPart}>
