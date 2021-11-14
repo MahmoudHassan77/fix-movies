@@ -18,7 +18,6 @@ const setInFavourite=()=>{
             {movie.adult && <div className={style.plus}>+18</div>}
             <img className={style.image} src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt="CardImage" />
             <div className={style.cardHeader}>
-               
                 <h3>{movie.title}</h3>
             </div>
             <div className={style.cardBody}>

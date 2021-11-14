@@ -10,9 +10,11 @@ const MoviesContextProvider = (props) => {
   const [favMovies, setFavMovies] = useState([]);
   const [radioVal, setradioVal] = useState("1");
   const [page, setPage] = useState(1);
+  const [loader, setLoader] = useState(false);
 
 
 useEffect(() => {
+  setLoader(true);
   const initialLang=getFromLocalStorage("language") || "en";
   const initialFavourite=getFromLocalStorage("favourite") || [];
   setLanguage(initialLang);
@@ -27,6 +29,7 @@ useEffect(() => {
       }
     });
     setMovies(movies);
+    setLoader(false);
   });
 },[])
 
@@ -41,6 +44,7 @@ useEffect(()=>{
   }
 
   const changeRadioVal=(val)=>{
+    setLoader(true);
     setPage(1);
     let type = moviesTypes.find(t=>t.id === +val);
     setradioVal(val);
@@ -59,10 +63,12 @@ useEffect(()=>{
         }
       });
       setMovies(movies);
+      setLoader(false);
     })
   }
 
   const loadMorePages=()=>{
+    setLoader(true);
     let type = moviesTypes.find(t=>t.id === +radioVal);
     getAllMovies(page,type.value).then((res)=>{
       let newMovies=res.data.results.map((m)=>{
@@ -74,6 +80,7 @@ useEffect(()=>{
         }
       });
       setMovies([...movies, ...newMovies]);
+      setLoader(false);
     })
   }
 
@@ -132,7 +139,7 @@ useEffect(()=>{
                   radioVal, changeRadioVal,
                   movies,searchMovies,
                   addToFavourite, favMovies,
-                  increasePage
+                  increasePage,loader
                 }}
         >
           {props.children}
