@@ -1,0 +1,54 @@
+@import "../../style/style";
+
+.favContainer{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap; 
+    height: calc(100vh - calc(var(--navbar-height) + var(--footer-height)));
+    background-color: var(--color-bg-light-theme);
+    width: 100%;
+    padding: 20px;
+    overflow-y: scroll;
+  &::-webkit-scrollbar {
+    width: 1.6rem;
+    scroll-behavior: smooth;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border: 0.4rem solid #0000;
+    border-radius: 99em;
+    background-color: #c3c2c4;
+    background-clip: content-box;
+
+    &:hover {
+      background-color: #a2a1a3;
+    }
+}
+
+}
+
+.txt{
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--color-black);
+    font-family: var(--font-family-en);
+    padding: 1rem;
+    text-align: center;
+    align-self: center;
+   
+}
+.ar{
+    font-family: var(--font-family-ar);
+}
+
+@media only screen and (max-width: 1100px) {
+    .favContainer{
+      height: calc(100vh - calc(var(--navbar-height) + var(--footer-height)));
+    }
+}
+@media only screen and (max-width: 500px) {
+    .favContainer{
+      height: calc(100vh - calc(var(--navbar-height-sm) + var(--footer-height)));
+    }
+}

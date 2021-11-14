@@ -58,7 +58,7 @@ margin-bottom: 100px;
 @media only screen and (max-width: 1100px) {
  .container{
    flex-direction: column;
-   height: calc(100vh - calc(var(--navbar-height-sm) + var(--footer-height)));
+   height: calc(100vh - calc(var(--navbar-height) + var(--footer-height)));
    overflow: scroll;
    &::-webkit-scrollbar {
     display: none;
@@ -68,11 +68,12 @@ margin-bottom: 100px;
  .filter{
     width: 100%;
     padding:8px;
-    height: 175px;
+    height: 220px;
  }
  .body{
     width: 100%;
     margin-top: 5px;
+    height: 100%;
     margin-bottom: 5px;
     overflow: visible;
     &::-webkit-scrollbar {
@@ -81,3 +82,8 @@ margin-bottom: 100px;
     
  }
 }
+@media only screen and (max-width: 500px) {
+  .container{
+    height: calc(100vh - calc(var(--navbar-height-sm) + var(--footer-height)));
+  }
+ }

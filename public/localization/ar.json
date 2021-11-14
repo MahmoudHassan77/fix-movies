@@ -7,5 +7,6 @@
     "filter.upcoming":"الأفلام القادمة",
     "filter.mow":"افلام قيد التشغيل",
     "card.date":"التاريخ",
-    "card.rated":"المعدل"
+    "card.rated":"المعدل",
+    "fav.empty":"لا توجد أفلام في القائمة المفضلة"
 }

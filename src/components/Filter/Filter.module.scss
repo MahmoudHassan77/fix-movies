@@ -159,21 +159,6 @@
    .label {
     width: 30%;
     font-size: 0.7rem;
-  display: flex;
-  flex: auto;
-  vertical-align: middle;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  cursor: pointer;
-  background-color: var(--color-gray);
-  color: white;
-  padding: 5px 5px;
-  border-radius: 6px;
-  transition: color --transition-fast ease-out, 
-  background-color --transition-fast ease-in;
-  user-select: none;
-  margin: 2px;
 }
 
 }

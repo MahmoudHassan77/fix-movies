@@ -8,6 +8,7 @@ const MoviesContextProvider = (props) => {
   const [theme, setTheme] = useState();
   const [language, setLanguage] = useState();
   const [movies, setMovies] = useState([]);
+  const [favMovies, setFavMovies] = useState([]);
   const [radioVal, setradioVal] = useState("1");
 useEffect(() => {
   const initialTheme=getFromLocalStorage("theme") || "dark";
@@ -15,9 +16,10 @@ useEffect(() => {
   const initialFavourite=getFromLocalStorage("favourite") || [];
   setTheme(initialTheme);
   setLanguage(initialLang);
+  setFavMovies(initialFavourite);
   getAllMovies(1,"top_rated").then((res)=>{
     let movies=res.data.results.map((m)=>{
-      if(initialFavourite.includes(m.id)){
+      if(initialFavourite.some((v) => v.id === m.id)){
         return {...m,isFavourite:true}
       }
       else{
@@ -72,17 +74,49 @@ useEffect(()=>{
 const searchMovies=(text)=>{
   searchAboutMovie(text).then((res)=>{
     let movies=res.data.results.map((m)=>{
-      return {...m,isFavourite:false}
+      if(favMovies.some((v) => v.id === m.id)){
+        return {...m,isFavourite:true}
+      }
+      else{
+        return {...m,isFavourite:false}
+      }
     });
     setMovies(movies);
   })
 }
+
+
+const addToFavourite=(movie)=>{
+  let favMovies = getFromLocalStorage("favourite") || [];
+  let isExist = favMovies.some((m) => m.id === movie.id);
+  if(!isExist){
+    setFavMovies([...favMovies,movie]);
+  }
+  else{
+    setFavMovies(favMovies.filter((m)=>m.id!==movie.id));
+    
+  }
+}
+useEffect(()=>{
+  setToLocalStorage("favourite",favMovies);
+  let newMovies=movies.map((m)=>{
+    if(favMovies.some((v) => v.id === m.id)){
+      return {...m,isFavourite:true}
+    }
+    else{
+      return {...m,isFavourite:false}
+    }
+  });
+  setMovies(newMovies);
+},[favMovies]);
+
     return (
         <MoviesContext.Provider
           value={{theme, changeTheme,
                   language, changeLanguage,
                   radioVal, changeRadioVal,
-                  movies,searchMovies
+                  movies,searchMovies,
+                  addToFavourite, favMovies
                 }}
         >
           {props.children}
