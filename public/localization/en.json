@@ -8,5 +8,6 @@
     "filter.mow":"Now Playing Movies",
     "card.date":"Date",
     "card.rated":"Rated",
-    "fav.empty":"Favourite movies list is empty"
+    "fav.empty":"Favourite movies list is empty",
+    "home.loadMore":"Load More"
 }

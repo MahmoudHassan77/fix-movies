@@ -10,3 +10,9 @@ export const setToLocalStorage = (key, value) => {
     return localStorage.removeItem(key);
   };
   
+
+  export const moviesTypes = [
+    {id:1,value:"top_rated"},
+    {id:2,value:"upcoming"},
+    {id:3,value:"now_playing"}
+  ]

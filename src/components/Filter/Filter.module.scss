@@ -23,9 +23,6 @@
     overflow: hidden;
     font-family: var(--font-family-en);
     @include whiteShadow;
-  
-    
-  
     & .divider {
       margin: 0 var(--sp-sm);
       border-radius: 99em;
@@ -33,7 +30,6 @@
       background: currentColor;
       color: #e1e1e1;
     }
-  
     & .description {
       padding: 10px;
       margin: 0;

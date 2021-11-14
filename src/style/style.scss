@@ -5,35 +5,21 @@
   --navbar-height: 80px;
   --navbar-height-sm: 60px;
   --footer-height: 40px;
-  --font-size-small: 1.4rem;
-  --font-size-regular: 1.6rem;
-  --font-size-large: 1.8rem;
-  --font-size-xLarge: 4.2rem;
-  --font-weight-light: 300;
-  --font-weight-regular: 400;
-  --font-weight-bold: 700;
-  --default-padding: 1.6rem;
   --font-family-ar: "Almarai", sans-serif;
   --font-family-en: "Roboto", sans-serif;
-  --timing-animation: 0.5s;
   --color-black: #000;
   --color-black-1: #3e3e3e;
   --color-red: #ff2d2d;
-  --color-blue: #064267;
   --color-white: white;
   --color-gray: #525252;
-  --color-light-gray: #f8f8f8;
-  --color-light-card-color: #f5f4f9;
   --color-text: var(--color-black);
   --color-bg: var(--color-light-gray);
   --color-input: var(--color-white);
   --color-link: var(--color-blue);
-  --color-task-hover: #ececec;
-  --color-bg-dark-theme: #222222;
   --color-bg-light-theme: #E5E4E7;
-  --color-input-dark-theme: #333333;
   --color-text-dark-theme: var(--color-light-gray);
   --main-color:#ffd41a;
+  --color-light-card-color: #f5f4f9;
 }
 @mixin whiteShadow {
   border-radius: 0.8rem;
