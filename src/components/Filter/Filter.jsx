@@ -30,7 +30,6 @@ export const Filter = () => {
                 <summary className={style.title}><FormattedMessage id="filter.types" defaultMessage="Movies Type" /></summary>
                 <hr className={style.divider}/>
                 <div className={style.description}>
-               
                 <div className={style.InputGroup} onChange={onRadioValuechanged}> 
  
                   <input type="radio" name="type" id="type_1" value="1" defaultChecked={radioVal==="1"} />

@@ -21,16 +21,10 @@
     flex-direction:column;
     margin: 10px;
     background-color:var(--color-white);
-    font-family: var(--font-family-en);
+   
     @include whiteShadow;
     border-radius:20px;
     animation: FedIn 2s ease-in;
-    h3{
-        width: 100%;
-        height: 30%;
-        text-align:center;
-        padding:10px;
-    }
     background-color: var(--color-light-card-color);
 }
 .cardBody{
@@ -38,10 +32,10 @@
     height: 10%;
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
     padding: 10px;
     font-weight: bold;
-
+    color: var(--color-text);
 }
 
 .cardHeader{
@@ -49,6 +43,16 @@
     height: 20%;
     text-align: center;
     position: relative;
+    color: var(--color-black-1);
+    h3{
+        width: 100%;
+        height: 30%;
+        text-align:center;
+        padding:10px;
+        font-size: 1.1rem;
+        font-weight: bold;
+        font-family: var(--font-family-en);
+    }
 }
 .image{
     width: 100%;

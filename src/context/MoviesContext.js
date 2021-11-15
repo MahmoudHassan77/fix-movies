@@ -11,6 +11,7 @@ const MoviesContextProvider = (props) => {
   const [radioVal, setradioVal] = useState("1");
   const [page, setPage] = useState(1);
   const [loader, setLoader] = useState(false);
+  const [searchFlag, setSearchFlag] = useState(false);
 
 
 useEffect(() => {
@@ -53,6 +54,7 @@ useEffect(()=>{
   }
 
   const getMovies=(type)=>{
+    setSearchFlag(false)
     getAllMovies(page,type).then((res)=>{
       let movies=res.data.results.map((m)=>{
         if(favMovies.some((v) => v.id === m.id)){
@@ -86,6 +88,8 @@ useEffect(()=>{
 
 
 const searchMovies=(text)=>{
+  setSearchFlag(true);
+  setradioVal("4");
   searchAboutMovie(text).then((res)=>{
     let movies=res.data.results.map((m)=>{
       if(favMovies.some((v) => v.id === m.id)){
@@ -139,7 +143,7 @@ useEffect(()=>{
                   radioVal, changeRadioVal,
                   movies,searchMovies,
                   addToFavourite, favMovies,
-                  increasePage,loader
+                  increasePage,loader, searchFlag
                 }}
         >
           {props.children}
